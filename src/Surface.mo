@@ -16,10 +16,14 @@ module {
   /// (Consider Motoko Playground, but in a multi-user mode.)
   type Authors = [Principal];
 
+  /// Creation/modification time.
+  type Time = Int;
+
   type Annotated<X> = {
     file : Text;
     region : Region;
     authors : ?Authors;
+    time : Time;
     it : X;
   };
   
