@@ -3,7 +3,6 @@
 module {
 
   type Pos = {
-    file : Text;
     line : Nat;
     col : Nat;
   };
@@ -18,6 +17,7 @@ module {
   type Authors = [Principal];
 
   type Annotated<X> = {
+    file : Text;
     region : Region;
     authors : ?Authors;
     it : X;
